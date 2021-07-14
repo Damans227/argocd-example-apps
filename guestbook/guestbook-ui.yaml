@@ -3,6 +3,8 @@ kind: Mapping
 metadata:
   annotations:
     getambassador.io/resource-changed: 'true'
+  labels:
+    app.kubernetes.io/instance: guestbook
   managedFields:
     - apiVersion: getambassador.io/v2
       fieldsType: FieldsV1
@@ -22,5 +24,5 @@ metadata:
   name: guestbook-ui
   namespace: default
 spec:
-  prefix: /guestbook-ui /
+  prefix: /guestbook-ui/
   service: guestbook-ui
